@@ -1,6 +1,14 @@
 class BooksController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :return, only: [:edit]
+
+  def return
+    book = Book.find(params[:id])
+    user = book.user_id
+    if current_user.id != user
+      redirect_to books_path
+    end
+  end
 
   def new
     @book = Book.new
