@@ -4,7 +4,7 @@
 
 		<div class="col-lg-4">
 			<div class="">
-       			<%= render 'users/show', user: @user %>
+       			<%= render 'users/list', user: @user %>
       		</div>
       		<div>
        			<%= render 'books/new', book: @book %>
@@ -32,7 +32,7 @@
 							<%= user.name %>
 						</td>
 						<td>
-							<%= link_to 'show', '#' %>
+							<%= link_to 'show', user_path(user) %>
 						</td>
 					</tr>
 				<% end %>
