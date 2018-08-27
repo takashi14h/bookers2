@@ -33,7 +33,7 @@
             <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
               <% if user_signed_in? %>
                <li class="">
-                  <%= link_to "ホーム", user_path(current_user), class: "home" %>
+                  <%= link_to "ホーム", user_path(current_user), class: "user_#{current_user.id}" %>
                </li>
                <li class="">
                   <%= link_to "user一覧", users_path, class: "users" %>
