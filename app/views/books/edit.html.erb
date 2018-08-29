@@ -1,6 +1,6 @@
 <%= form_for(@book) do |f| %>
 <% if @book.errors.any? %>
-	<div id="error_explantion">
+	<div>
 		<ul>
 			<% @book.errors.full_messages.each do |message| %>
 			<li><%= message %></li>
